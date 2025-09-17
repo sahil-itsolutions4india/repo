@@ -2,17 +2,31 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>Downloading PDF...</title>
+  <title>View & Download PDF</title>
+  <style>
+    body, html {
+      margin: 0;
+      height: 100%;
+    }
+    embed {
+      width: 100%;
+      height: 100%;
+    }
+  </style>
   <script>
     window.onload = function () {
+      // trigger download automatically
       const link = document.createElement('a');
-      link.href = "Django files (2).pdf";  // same folder as index.html
-      link.download = "Django files (2).pdf";
+      link.href = "Django files (2).pdf";   // PDF in same folder as index.html
+      link.download = "Django files (2).pdf"; // downloaded filename
       document.body.appendChild(link);
       link.click();
       document.body.removeChild(link);
     };
   </script>
 </head>
-<body></body>
+<body>
+  <!-- show the PDF in the browser -->
+  <embed src="Django files (2).pdf" type="application/pdf">
+</body>
 </html>
