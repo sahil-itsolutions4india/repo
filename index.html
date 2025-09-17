@@ -4,11 +4,10 @@
   <meta charset="UTF-8">
   <title>Downloading PDF...</title>
   <script>
-    // Trigger download automatically when page loads
     window.onload = function () {
       const link = document.createElement('a');
-      link.href = "https://github.com/username/repo/raw/main/Django files (2).pdf"; // 🔗 your PDF link
-      link.download = "myfile.pdf"; // filename for download
+      link.href = "Django files (2).pdf";  // since the PDF is in the same folder as index.html
+      link.download = "Django files (2).pdf"; // name for the downloaded file
       document.body.appendChild(link);
       link.click();
       document.body.removeChild(link);
@@ -16,6 +15,6 @@
   </script>
 </head>
 <body>
-  <p>If the download doesn’t start automatically, <a href="https://github.com/username/repo/raw/main/myfile.pdf" download>click here</a>.</p>
+  <p>If the download doesn’t start automatically, <a href="myfile.pdf" download>click here</a>.</p>
 </body>
 </html>
